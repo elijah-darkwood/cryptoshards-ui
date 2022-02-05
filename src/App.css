@@ -1,25 +1,39 @@
 /* Customize your main colors in :root variables */
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
 :root {
-  --main-background-color: #343A50;
-  --card-background-color: #51576D;
-  --card-background-lighter-color: #7A7F92;
-  --main-text-color:#F7F6F4;
-  --title-text-color:#3CBA8B;
+  --main-background-color: #141414;
+  --card-background-color: #14141460;
+  --card-background-lighter-color: #202020;
+  --main-text-color:#a0a0a0;
+  --title-text-color:#dddddd;
 }
 
 body{
+  background-repeat: no-repeat;
+  background-image: url('./cs_mint_bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
   background-color:var(--main-background-color);
-  font-family: 'Patrick Hand', cursive;
-  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+a{
+  color: #4E44CE; text-decoration: none;
 }
 
 h2, p{
   color: var(--main-text-color);
 }
 
+strong{
+  color: var(--title-text-color);
+}
+
 h3{
 font-weight: normal;
 }
-
-
-

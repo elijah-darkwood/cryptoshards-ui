@@ -229,16 +229,25 @@ const BorderLinearProgress = styled(LinearProgress)`
 
 const ShimmerTitle = styled.h1`
   margin: 50px auto;
-  text-transform: uppercase;
-  animation: glow 2s ease-in-out infinite alternate;
-  color: var(--main-text-color);
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 20px var(--main-text-color);
-    }
-    to {
-      text-shadow: 0 0 30px var(--title-text-color), 0 0 10px var(--title-text-color);
-    }
+  letter-spacing: -3px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, rgba(195,136,8,1) 0%, rgba(0,78,120,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 70px;
+  padding: 0px 0px 10px;
+//   animation: glow 2s ease-in-out infinite alternate;
+//   color: var(--main-text-color);
+//   @keyframes glow {
+//     from {
+//       text-shadow: 0 0 20px var(--main-text-color);
+//     }
+//     to {
+//       text-shadow: 0 0 30px var(--title-text-color), 0 0 10px var(--title-text-color);
+//     }
   }
 `;
 
@@ -483,15 +492,10 @@ const Home = (props: HomeProps) => {
         <main>
             <MainContainer>
                 <WalletContainer>
-                    <Logo><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer"><img alt=""
-                                                                                                          src="logo.png"/></a></Logo>
+                    <Logo><a href="https://cryptoshards.art" target="_blank" rel="noopener noreferrer"><img alt=""
+                                                                                                          src="cs_logo-transparent.png"/></a></Logo>
                     <Menu>
-                        <li><a href="http://localhost:3000/" target="_blank" rel="noopener noreferrer">Menu 1</a>
-                        </li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 2</a></li>
-                        <li><a href="http://localhost:3000/" target="_blank"
-                               rel="noopener noreferrer">Menu 3</a></li>
+                        {/* <li><a href="https://linktr.ee/cryptoshards" target="_blank" rel="noopener noreferrer">Official Links</a></li> */}
                     </Menu>
                     <Wallet>
                         {wallet ?
@@ -499,22 +503,22 @@ const Home = (props: HomeProps) => {
                             <ConnectButton>Connect Wallet</ConnectButton>}
                     </Wallet>
                 </WalletContainer>
-                <ShimmerTitle>MINT IS LIVE !</ShimmerTitle>
+                <ShimmerTitle>claim your<br/>cryptoshard</ShimmerTitle>
                 <br/>
 
 
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <GoldTitle>CryptoShards Generation #0</GoldTitle>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="cryptoshards-mint.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
-                              <h3>You have {whitelistTokenBalance} whitelist mint(s) remaining.</h3>}
+                              <h3>You have {whitelistTokenBalance} discounted (whitelist) mint.</h3>}
                             {wallet && isActive &&
                                 /* <p>Total Minted : {100 - (itemsRemaining * 100 / itemsAvailable)}%</p>}*/
                               <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
@@ -580,31 +584,32 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 1</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>Next Prize (1:444)</GoldTitle></LogoAligner>
+                            <p><strong>Apple Bundle*</strong></p>
+                            <p><br/>1. MacBook Pro 16, M1 Max, 64GB, 2TB<br/>2. iPhone 13 Pro, 1TB<br/>3. iPad Pro 12.9, 1TB<br/>4. iPad Mini 256GB<br/>5. Apple Watch 7 Hermès<br/>6. AirPods Pro<br/>7. Apple TV 4K<br/></p>
+                            <p><strong>Total prize value: $12,000</strong></p>
+                            <p>*or the equivalent in <strong>SOL</strong>.</p>
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 2</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                        </Des>
-                        <Des elevation={2}>
-                            <LogoAligner><img src="logo.png" alt=""></img><GoldTitle>TITLE 3</GoldTitle></LogoAligner>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt.</p>
+                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>How to Buy</GoldTitle></LogoAligner>
+                            <p>This guide is intended for those of you who don't have any extended experience with cryptocurrencies,<br/>
+                            but still want to take advantage of the benefits of owning an NFT from a cool collection right from Mint Day.</p>
+                            <p>1️⃣ Create an account with any centralised exchange. (Ex: KRAKEN, BINANCE, FTX, COINBASE etc.)</p>
+                            <p>2️⃣ Here, you will have to connect your bank account or use your debit/credit card, Apple Pay etc.<br/>
+                            to purchase the cryptocurrency Solana ($SOL)</p>
+                            <p>3️⃣ Install and create a <a href="https://phantom.app/download" target="_blank" rel="noopener noreferrer">Phantom wallet</a>.<br/>
+                            This wallet allows you to store your Solana and use it in various decentralised apps and marketplaces.<br/>
+                            If you need help setting up the wallet, follow <a href="https://phantom.app/help/installing-phantom" target="_blank" rel="noopener noreferrer">this guide</a>.</p>
+                            <p>4️⃣ Transfer funds from the exchange to your Phantom wallet.<br/>
+                            To do this, open the Phantom app and copy your wallet address by clicking "Wallet 1" at the top.<br/>
+                            Then on your exchange: open Wallet -&gt; Solana -&gt;<br/>
+                            Withdraw to external wallet -&gt; Paste the Phantom wallet address as recipient.<br/>
+                            If you need additional help with this, follow <a href="https://phantom.app/help/how-to-deposit-sol-to-phantom" target="_blank" rel="noopener noreferrer">this guide</a>.</p>
+                            <p>5️⃣ Visit our <a href="https://cryptoshards.xyz" target="_blank" rel="noopener noreferrer">Mint Website</a> and click Connect Wallet, then accept on the Phantom App.</p>
+                            <p>6️⃣ Click the "MINT" button and approve the transaction in your Wallet.<br/>
+                            You'll be able to see the CryptoShards NFT in your Phantom wallet shortly.</p>
+                            <p>7️⃣ Enjoy, flex and hodl your CryptoShard, it'll bring you many advantages along the way!</p>
+                            <p>Any other questions you may have about this process, please join the Club and ask the members!</p>
                         </Des>
                     </DesContainer>
                 </MintContainer>
