@@ -9,7 +9,7 @@
 }
 
 body{
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-image: url('./cs_mint_bg.jpg');
   background-size: cover;
   background-position: center center;

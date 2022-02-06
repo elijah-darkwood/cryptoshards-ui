@@ -70,7 +70,7 @@ const ConnectButton = styled(WalletMultiButton)`
 `;
 
 const NFT = styled(Paper)`
-  min-width: 400px;
+  min-width: 300px;
   padding: 5px 20px 20px 20px;
   flex: 1 1 auto;
   background-color: var(--card-background-color) !important;
@@ -115,9 +115,9 @@ const MintButtonContainer = styled.div`
 
 const Logo = styled.div`
   flex: 0 0 auto;
-
+  margin: auto;
   img {
-    height: 60px;
+    height: 40px;
   }
 `;
 const Menu = styled.ul`
@@ -203,7 +203,7 @@ const Price = styled(Chip)`
 `;
 
 const Image = styled.img`
-  height: 400px;
+  height: 300px;
   width: auto;
   border-radius: 7px;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
@@ -236,8 +236,8 @@ const ShimmerTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 50px;
+  line-height: 50px;
   padding: 0px 0px 10px;
 //   animation: glow 2s ease-in-out infinite alternate;
 //   color: var(--main-text-color);
@@ -520,7 +520,6 @@ const Home = (props: HomeProps) => {
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
                               <h3>You have {whitelistTokenBalance} discounted (whitelist) mint.</h3>}
                             {wallet && isActive &&
-                                /* <p>Total Minted : {100 - (itemsRemaining * 100 / itemsAvailable)}%</p>}*/
                               <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
                             {wallet && isActive && <BorderLinearProgress variant="determinate"
                                                                          value={100 - (itemsRemaining * 100 / itemsAvailable)}/>}
