@@ -1,5 +1,6 @@
 /* Customize your main colors in :root variables */
 @import url('https://fonts.googleapis.com/css?family=Poppins:600');
+
 :root {
   --main-background-color: #141414;
   --card-background-color: #14141460;
@@ -9,9 +10,9 @@
 }
 
 body{
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-image: url('./cs_mint_bg.jpg');
-  background-size: cover;
+  background-size: inherit;
   background-position: center center;
   width: 100%;
   height: 100%;

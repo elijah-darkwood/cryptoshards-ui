@@ -253,6 +253,15 @@ const ShimmerTitle = styled.h1`
 
 const GoldTitle = styled.h2`
   color: var(--title-text-color);
+  letter-spacing: -1px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, rgba(195,136,8,1) 0%, rgba(0,78,120,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 5px 0px 5px;
 `;
 
 const LogoAligner = styled.div`
@@ -583,16 +592,16 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>Next Prize (1:444)</GoldTitle></LogoAligner>
+                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>next prize at 5% - 444/8888</GoldTitle></LogoAligner>
                             <p><strong>Apple Bundle*</strong></p>
                             <p><br/>1. MacBook Pro 16, M1 Max, 64GB, 2TB<br/>2. iPhone 13 Pro, 1TB<br/>3. iPad Pro 12.9, 1TB<br/>4. iPad Mini 256GB<br/>5. Apple Watch 7 Hermès<br/>6. AirPods Pro<br/>7. Apple TV 4K<br/></p>
                             <p><strong>Total prize value: $12,000</strong></p>
                             <p>*or the equivalent in <strong>SOL</strong>.</p>
                         </Des>
                         <Des elevation={2}>
-                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>How to Buy</GoldTitle></LogoAligner>
+                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>how to buy</GoldTitle></LogoAligner>
                             <p>This guide is intended for those of you who don't have any extended experience with cryptocurrencies,<br/>
-                            but still want to take advantage of the benefits of owning an NFT from a cool collection right from Mint Day.</p>
+                            but still want to take advantage of the benefits of owning an NFT from a cool collection right from the minting stage.</p>
                             <p>1️⃣ Create an account with any centralised exchange. (Ex: KRAKEN, BINANCE, FTX, COINBASE etc.)</p>
                             <p>2️⃣ Here, you will have to connect your bank account or use your debit/credit card, Apple Pay etc.<br/>
                             to purchase the cryptocurrency Solana ($SOL)</p>
@@ -605,7 +614,7 @@ const Home = (props: HomeProps) => {
                             Withdraw to external wallet -&gt; Paste the Phantom wallet address as recipient.<br/>
                             If you need additional help with this, follow <a href="https://phantom.app/help/how-to-deposit-sol-to-phantom" target="_blank" rel="noopener noreferrer">this guide</a>.</p>
                             <p>5️⃣ Visit our <a href="https://cryptoshards.xyz" target="_blank" rel="noopener noreferrer">Mint Website</a> and click Connect Wallet, then accept on the Phantom App.</p>
-                            <p>6️⃣ Click the "MINT" button and approve the transaction in your Wallet.<br/>
+                            <p>6️⃣ Click the "MINT" button and after completing the Captcha, approve the transaction in your Wallet.<br/>
                             You'll be able to see the CryptoShards NFT in your Phantom wallet shortly.</p>
                             <p>7️⃣ Enjoy, flex and hodl your CryptoShard, it'll bring you many advantages along the way!</p>
                             <p>Any other questions you may have about this process, please join the Club and ask the members!</p>
