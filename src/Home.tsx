@@ -92,12 +92,15 @@ const MintButtonContainer = styled.div`
   button.MuiButton-contained:not(.MuiButton-containedPrimary).Mui-disabled {
     color: #464646;
   }
+  button.MuiButton-contained {
+    font-family: 'Poppins';
+  }
 
   button.MuiButton-contained:not(.MuiButton-containedPrimary):hover,
   button.MuiButton-contained:not(.MuiButton-containedPrimary):focus {
     -webkit-animation: pulse 1s;
     animation: pulse 1s;
-    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 2em rgba(195, 136, 8, 0);
   }
 
   @-webkit-keyframes pulse {
@@ -196,6 +199,7 @@ const DesContainer = styled.div`
 `;
 
 const Price = styled(Chip)`
+  background-color: rgba(22, 22, 22, 0.62);
   position: absolute;
   margin: 5px;
   font-weight: bold;
@@ -223,7 +227,7 @@ const BorderLinearProgress = styled(LinearProgress)`
 
   > div.MuiLinearProgress-bar1Determinate {
     border-radius: 30px !important;
-    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.5));
+    background-image: linear-gradient(90deg, rgba(195,136,8,1) 0%, rgba(0,78,120,1) 100%);
   }
 `;
 
@@ -236,9 +240,13 @@ const ShimmerTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 70px;
+  line-height: 70px;
   padding: 0px 0px 10px;
+  @media (max-width: 768px) {
+      font-size: 50px;
+      line-height: 50px;
+  }
 //   animation: glow 2s ease-in-out infinite alternate;
 //   color: var(--main-text-color);
 //   @keyframes glow {
@@ -262,6 +270,10 @@ const GoldTitle = styled.h2`
   font-weight: 600;
   font-size: 24px;
   padding: 5px 0px 5px;
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 26px;
+}
 `;
 
 const LogoAligner = styled.div`
@@ -296,6 +308,14 @@ const Home = (props: HomeProps) => {
     const [whitelistPrice, setWhitelistPrice] = useState(0);
     const [whitelistEnabled, setWhitelistEnabled] = useState(false);
     const [whitelistTokenBalance, setWhitelistTokenBalance] = useState(0);
+
+useEffect(()=>{
+    const PriceContainer :any = document.querySelector(".MuiChip-root")
+
+    if (PriceContainer) {
+        PriceContainer.style.backgroundColor = "rgba(22,22,22,0.62)"
+    }
+}, [])
 
     const [alertState, setAlertState] = useState<AlertState>({
         open: false,
@@ -527,7 +547,7 @@ const Home = (props: HomeProps) => {
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) &&
-                              <h3>You have {whitelistTokenBalance} discounted (whitelist) mint.</h3>}
+                              <h3>You have {whitelistTokenBalance} discounted mint available!</h3>}
                             {wallet && isActive &&
                               <h3>TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}</h3>}
                             {wallet && isActive && <BorderLinearProgress variant="determinate"
@@ -592,11 +612,11 @@ const Home = (props: HomeProps) => {
                     </DesContainer>
                     <DesContainer>
                         <Des elevation={2}>
-                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>next prize at 5% - 444/8888</GoldTitle></LogoAligner>
-                            <p><strong>Apple Bundle*</strong></p>
-                            <p><br/>1. MacBook Pro 16, M1 Max, 64GB, 2TB<br/>2. iPhone 13 Pro, 1TB<br/>3. iPad Pro 12.9, 1TB<br/>4. iPad Mini 256GB<br/>5. Apple Watch 7 Hermès<br/>6. AirPods Pro<br/>7. Apple TV 4K<br/></p>
+                            <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>next prize at 5% (444/8888)</GoldTitle></LogoAligner>
+                            <h2>Apple Bundle*</h2>
+                            <p><br/>🔘 MacBook Pro 16, M1 Max, 64GB, 2TB<br/>🔘 iPhone 13 Pro, 1TB<br/>🔘 iPad Pro 12.9, 1TB<br/>🔘 iPad Mini 256GB<br/>🔘 Apple Watch 7 Hermès<br/>🔘 AirPods Pro<br/>🔘 Apple TV 4K<br/></p>
                             <p><strong>Total prize value: $12,000</strong></p>
-                            <p>*or the equivalent in <strong>SOL</strong>.</p>
+                            <p>*or the equivalent in <strong>$SOL</strong>.</p>
                         </Des>
                         <Des elevation={2}>
                             <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>how to buy</GoldTitle></LogoAligner>
@@ -617,7 +637,7 @@ const Home = (props: HomeProps) => {
                             <p>6️⃣ Click the "MINT" button and after completing the Captcha, approve the transaction in your Wallet.<br/>
                             You'll be able to see the CryptoShards NFT in your Phantom wallet shortly.</p>
                             <p>7️⃣ Enjoy, flex and hodl your CryptoShard, it'll bring you many advantages along the way!</p>
-                            <p>Any other questions you may have about this process, please join the Club and ask the members!</p>
+                            <p>Any other questions you may have about this process, please join the <a href="https://cryptoshards.club" target="_blank" rel="noopener noreferrer">Club</a> and ask the Staff!</p>
                         </Des>
                     </DesContainer>
                 </MintContainer>
