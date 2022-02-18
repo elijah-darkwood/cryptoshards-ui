@@ -614,8 +614,8 @@ useEffect(()=>{
                         <Des elevation={2}>
                             <LogoAligner><img src="cs_logo-transparent.png" alt=""></img><GoldTitle>next prize at 5% (444/8888)</GoldTitle></LogoAligner>
                             <h2>Apple Bundle*</h2>
-                            <p><br/>🔘 MacBook Pro 16, M1 Max, 64GB, 2TB<br/>🔘 iPhone 13 Pro, 1TB<br/>🔘 iPad Pro 12.9, 1TB<br/>🔘 iPad Mini 256GB<br/>🔘 Apple Watch 7 Hermès<br/>🔘 AirPods Pro<br/>🔘 Apple TV 4K<br/></p>
-                            <p><strong>Total prize value: $12,000</strong></p>
+                            <p><br/>🔘 MacBook Pro 16, M1 Max, 64GB, 2TB<br/>🔘 Pro Display XDR + Stand<br/>🔘 iPhone 13 Pro, 1TB<br/>🔘 iPad Pro 12.9, 1TB<br/>🔘 iPad Mini 256GB<br/>🔘 Apple Watch 7 Hermès<br/>🔘 AirPods Max<br/>🔘 AirPods Pro<br/></p>
+                            <p><strong>Total prize value: $18,500</strong></p>
                             <p>*or the equivalent in <strong>$SOL</strong>.</p>
                         </Des>
                         <Des elevation={2}>
